@@ -13,33 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fernandocejas.android10.sample.domain.interactor;
+package com.sitexa.android.domain.interactor;
 
-import com.fernandocejas.android10.sample.domain.User;
-import com.fernandocejas.android10.sample.domain.executor.PostExecutionThread;
-import com.fernandocejas.android10.sample.domain.executor.ThreadExecutor;
-import com.fernandocejas.android10.sample.domain.repository.UserRepository;
+import com.sitexa.android.domain.repository.UserRepository;
 import javax.inject.Inject;
 import rx.Observable;
 
 /**
  * This class is an implementation of {@link UseCase} that represents a use case for
- * retrieving data related to an specific {@link User}.
+ * retrieving a collection of all {@link com.sitexa.android.domain.User}.
  */
-public class GetUserDetails extends UseCase {
+public class GetUserList extends UseCase {
 
-  private final int userId;
   private final UserRepository userRepository;
 
   @Inject
-  public GetUserDetails(int userId, UserRepository userRepository,
-      ThreadExecutor threadExecutor, PostExecutionThread postExecutionThread) {
+  public GetUserList(UserRepository userRepository, com.sitexa.android.domain.executor.ThreadExecutor threadExecutor,
+      com.sitexa.android.domain.executor.PostExecutionThread postExecutionThread) {
     super(threadExecutor, postExecutionThread);
-    this.userId = userId;
     this.userRepository = userRepository;
   }
 
-  @Override protected Observable buildUseCaseObservable() {
-    return this.userRepository.user(this.userId);
+  @Override public Observable buildUseCaseObservable() {
+    return this.userRepository.users();
   }
 }

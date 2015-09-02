@@ -13,10 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fernandocejas.android10.sample.domain.interactor;
+package com.sitexa.android.domain.interactor;
 
-import com.fernandocejas.android10.sample.domain.executor.PostExecutionThread;
-import com.fernandocejas.android10.sample.domain.executor.ThreadExecutor;
 import rx.Subscriber;
 import rx.Observable;
 import rx.Subscription;
@@ -33,13 +31,13 @@ import rx.subscriptions.Subscriptions;
  */
 public abstract class UseCase {
 
-  private final ThreadExecutor threadExecutor;
-  private final PostExecutionThread postExecutionThread;
+  private final com.sitexa.android.domain.executor.ThreadExecutor threadExecutor;
+  private final com.sitexa.android.domain.executor.PostExecutionThread postExecutionThread;
 
   private Subscription subscription = Subscriptions.empty();
 
-  protected UseCase(ThreadExecutor threadExecutor,
-      PostExecutionThread postExecutionThread) {
+  protected UseCase(com.sitexa.android.domain.executor.ThreadExecutor threadExecutor,
+      com.sitexa.android.domain.executor.PostExecutionThread postExecutionThread) {
     this.threadExecutor = threadExecutor;
     this.postExecutionThread = postExecutionThread;
   }

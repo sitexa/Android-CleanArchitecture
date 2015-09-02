@@ -13,25 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fernandocejas.android10.sample.domain.repository;
+package com.sitexa.android.domain.repository;
 
-import com.fernandocejas.android10.sample.domain.User;
 import java.util.List;
 import rx.Observable;
 
 /**
- * Interface that represents a Repository for getting {@link User} related data.
+ * Interface that represents a Repository for getting {@link com.sitexa.android.domain.User} related data.
  */
 public interface UserRepository {
   /**
-   * Get an {@link rx.Observable} which will emit a List of {@link User}.
+   * Get an {@link rx.Observable} which will emit a List of {@link com.sitexa.android.domain.User}.
    */
-  Observable<List<User>> users();
+  Observable<List<com.sitexa.android.domain.User>> users();
 
   /**
-   * Get an {@link rx.Observable} which will emit a {@link User}.
+   * Get an {@link rx.Observable} which will emit a {@link com.sitexa.android.domain.User}.
    *
    * @param userId The user id used to retrieve user data.
    */
-  Observable<User> user(final int userId);
+  Observable<com.sitexa.android.domain.User> user(final int userId);
 }
