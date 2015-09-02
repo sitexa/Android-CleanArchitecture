@@ -13,14 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fernandocejas.android10.sample.data.net;
+package com.sitexa.android.data.net;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import com.fernandocejas.android10.sample.data.entity.UserEntity;
-import com.fernandocejas.android10.sample.data.entity.mapper.UserEntityJsonMapper;
-import com.fernandocejas.android10.sample.data.exception.NetworkConnectionException;
+import com.sitexa.android.data.entity.UserEntity;
+import com.sitexa.android.data.entity.mapper.UserEntityJsonMapper;
+import com.sitexa.android.data.exception.NetworkConnectionException;
+
 import java.net.MalformedURLException;
 import java.util.List;
 import rx.Observable;

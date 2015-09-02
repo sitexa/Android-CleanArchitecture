@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fernandocejas.android10.sample.data.net;
+package com.sitexa.android.data.net;
 
-import com.fernandocejas.android10.sample.data.entity.UserEntity;
+import com.sitexa.android.data.entity.UserEntity;
 import java.util.List;
 import rx.Observable;
 
