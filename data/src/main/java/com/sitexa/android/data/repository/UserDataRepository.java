@@ -13,13 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fernandocejas.android10.sample.data.repository;
+package com.sitexa.android.data.repository;
 
-import com.fernandocejas.android10.sample.data.entity.mapper.UserEntityDataMapper;
-import com.fernandocejas.android10.sample.data.repository.datasource.UserDataStore;
-import com.fernandocejas.android10.sample.data.repository.datasource.UserDataStoreFactory;
-import com.fernandocejas.android10.sample.domain.User;
-import com.fernandocejas.android10.sample.domain.repository.UserRepository;
+import com.sitexa.android.data.entity.mapper.UserEntityDataMapper;
+import com.sitexa.android.data.repository.datasource.UserDataStore;
+import com.sitexa.android.data.repository.datasource.UserDataStoreFactory;
+import com.sitexa.android.domain.User;
+import com.sitexa.android.domain.repository.UserRepository;
+
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Singleton;
