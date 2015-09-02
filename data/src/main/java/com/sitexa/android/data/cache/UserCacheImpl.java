@@ -13,13 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fernandocejas.android10.sample.data.cache;
+package com.sitexa.android.data.cache;
 
 import android.content.Context;
-import com.fernandocejas.android10.sample.data.cache.serializer.JsonSerializer;
-import com.fernandocejas.android10.sample.data.entity.UserEntity;
-import com.fernandocejas.android10.sample.data.exception.UserNotFoundException;
-import com.fernandocejas.android10.sample.domain.executor.ThreadExecutor;
+import com.sitexa.android.data.cache.serializer.JsonSerializer;
+import com.sitexa.android.data.entity.UserEntity;
+import com.sitexa.android.data.exception.UserNotFoundException;
+import com.sitexa.android.domain.executor.ThreadExecutor;
+
 import java.io.File;
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -32,7 +33,7 @@ import rx.Subscriber;
 @Singleton
 public class UserCacheImpl implements UserCache {
 
-  private static final String SETTINGS_FILE_NAME = "com.fernandocejas.android10.SETTINGS";
+  private static final String SETTINGS_FILE_NAME = "com.fernandocejas.android.SETTINGS";
   private static final String SETTINGS_KEY_LAST_CACHE_UPDATE = "last_cache_update";
 
   private static final String DEFAULT_FILE_NAME = "user_";

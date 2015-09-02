@@ -13,26 +13,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fernandocejas.android10.sample.data.exception;
+package com.sitexa.android.data.exception;
+
+import com.sitexa.android.domain.exception.ErrorBundle;
 
 /**
- * Exception throw by the application when a User search can't return a valid result.
+ * Wrapper around Exceptions used to manage errors in the repository.
  */
-public class UserNotFoundException extends Exception {
+public class RepositoryErrorBundle implements ErrorBundle {
 
-  public UserNotFoundException() {
-    super();
+  private final Exception exception;
+
+  public RepositoryErrorBundle(Exception exception) {
+    this.exception = exception;
   }
 
-  public UserNotFoundException(final String message) {
-    super(message);
+  @Override
+  public Exception getException() {
+    return exception;
   }
 
-  public UserNotFoundException(final String message, final Throwable cause) {
-    super(message, cause);
-  }
-
-  public UserNotFoundException(final Throwable cause) {
-    super(cause);
+  @Override
+  public String getErrorMessage() {
+    String message = "";
+    if (this.exception != null) {
+      this.exception.getMessage();
+    }
+    return message;
   }
 }

@@ -13,26 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fernandocejas.android10.sample.data.exception;
+package com.sitexa.android.data.exception;
 
 /**
- * Exception throw by the application when a there is a network connection exception.
+ * Exception throw by the application when a User search can't return a valid result.
  */
-public class NetworkConnectionException extends Exception {
+public class UserNotFoundException extends Exception {
 
-  public NetworkConnectionException() {
+  public UserNotFoundException() {
     super();
   }
 
-  public NetworkConnectionException(final String message) {
+  public UserNotFoundException(final String message) {
     super(message);
   }
 
-  public NetworkConnectionException(final String message, final Throwable cause) {
+  public UserNotFoundException(final String message, final Throwable cause) {
     super(message, cause);
   }
 
-  public NetworkConnectionException(final Throwable cause) {
+  public UserNotFoundException(final Throwable cause) {
     super(cause);
   }
 }

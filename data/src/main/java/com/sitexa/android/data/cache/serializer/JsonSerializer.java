@@ -13,10 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fernandocejas.android10.sample.data.cache.serializer;
+package com.sitexa.android.data.cache.serializer;
 
-import com.fernandocejas.android10.sample.data.entity.UserEntity;
+import com.sitexa.android.data.entity.UserEntity;
 import com.google.gson.Gson;
+
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
